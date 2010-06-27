@@ -5,6 +5,7 @@ META.yml
 Makefile.PL
 README
 SubmittingPatches.pod
+TODO
 lib/Dist/Zilla/Plugin/Catalyst.pm
 lib/Dist/Zilla/Plugin/Catalyst/Helper.pm
 lib/Dist/Zilla/Plugin/Catalyst/New.pm
