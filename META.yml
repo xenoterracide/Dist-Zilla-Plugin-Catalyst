@@ -1,0 +1,31 @@
+---
+abstract: 'set of plugins for working with Catalyst'
+author:
+  - 'Caleb Cushing <xenoterracide@gmail.com>'
+build_requires:
+  Carp: 0
+  English: 0
+  File::Find: 0
+  File::Temp: 0
+  Scalar::Util: 0
+  Test::More: 0.94
+  perl: 5.004
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101740, CPAN::Meta::Converter version 2.101670'
+license: artistic_2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-Plugin-Catalyst
+requires:
+  Catalyst::Helper: 0
+  Dist::Zilla::File::FromCode: 0
+  Dist::Zilla::File::InMemory: 0
+  Dist::Zilla::Role::ModuleMaker: 0
+  Moose: 0
+resources:
+  bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
+  repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst.git
+version: 0.01

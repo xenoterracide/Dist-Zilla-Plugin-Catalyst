@@ -1,9 +1,24 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst;
+BEGIN {
+  $Dist::Zilla::Plugin::Catalyst::VERSION = '0.01';
+}
 
 1;
 # ABSTRACT: set of plugins for working with Catalyst
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Dist::Zilla::Plugin::Catalyst - set of plugins for working with Catalyst
+
+=head1 VERSION
+
+version 0.01
 
 =head1 DESCRIPTION
 
@@ -22,4 +37,17 @@ Please read the SubmittingPatches file included with this Distribution. Patches
 that are of sufficient quality, within the goals of the project and pass the
 checklist will probably be accepted.
 
+=head1 AUTHOR
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0
+
 =cut
+

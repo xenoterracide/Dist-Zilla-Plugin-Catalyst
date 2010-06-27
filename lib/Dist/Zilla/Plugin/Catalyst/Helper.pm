@@ -1,6 +1,9 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::Helper;
+BEGIN {
+  $Dist::Zilla::Plugin::Catalyst::Helper::VERSION = '0.01';
+}
 use Moose;
 use Dist::Zilla::File::InMemory;
 
@@ -42,9 +45,34 @@ no Moose;
 1;
 # ABSTRACT: a subclass of Catalyst::Helper
 
+
+__END__
+=pod
+
+=head1 NAME
+
+Dist::Zilla::Plugin::Catalyst::Helper - a subclass of Catalyst::Helper
+
+=head1 VERSION
+
+version 0.01
+
 =head1 DESCRIPTION
 
 this is used to override methods in L<Catalyst::Helper> so that it works
 better with dzil.
 
+=head1 AUTHOR
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0
+
 =cut
+

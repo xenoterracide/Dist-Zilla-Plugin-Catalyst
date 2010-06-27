@@ -1,4 +1,7 @@
 package Dist::Zilla::Plugin::Catalyst::New;
+BEGIN {
+  $Dist::Zilla::Plugin::Catalyst::New::VERSION = '0.01';
+}
 use Moose;
 use Dist::Zilla::Plugin::Catalyst::Helper;
 with qw( Dist::Zilla::Role::ModuleMaker );
@@ -23,6 +26,18 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
 # ABSTRACT: create a new catalyst project with dzil new
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Dist::Zilla::Plugin::Catalyst::New - create a new catalyst project with dzil new
+
+=head1 VERSION
+
+version 0.01
 
 =head1 SYNOPSIS
 
@@ -73,4 +88,17 @@ those for now.
 
 For all other problems use the bug tracker
 
+=head1 AUTHOR
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0
+
 =cut
+
