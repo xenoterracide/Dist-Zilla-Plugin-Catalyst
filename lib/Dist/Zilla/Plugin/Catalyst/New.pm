@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Dist::Zilla::Plugin::Catalyst::New;
 use Moose;
 use Dist::Zilla::Plugin::Catalyst::Helper;
