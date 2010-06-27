@@ -100,9 +100,19 @@ those for now.
 
 For all other problems use the bug tracker
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Caleb Cushing <xenoterracide@gmail.com>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

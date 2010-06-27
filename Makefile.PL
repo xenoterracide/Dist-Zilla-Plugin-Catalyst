@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.31;
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'set of plugins for working with Catalyst',
-  'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>',
+  'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>, Tomas Doran <bobtfish@bobtfish.net>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
     'English' => '0',

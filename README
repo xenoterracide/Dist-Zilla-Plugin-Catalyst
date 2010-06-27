@@ -15,8 +15,10 @@ PATCHES
     Patches that are of sufficient quality, within the goals of the project
     and pass the checklist will probably be accepted.
 
-AUTHOR
-    Caleb Cushing <xenoterracide@gmail.com>
+AUTHORS
+    *   Caleb Cushing <xenoterracide@gmail.com>
+
+    *   Tomas Doran <bobtfish@bobtfish.net>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2010 by Caleb Cushing.

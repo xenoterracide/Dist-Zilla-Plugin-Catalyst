@@ -2,6 +2,7 @@
 abstract: 'set of plugins for working with Catalyst'
 author:
   - 'Caleb Cushing <xenoterracide@gmail.com>'
+  - 'Tomas Doran <bobtfish@bobtfish.net>'
 build_requires:
   Carp: 0
   English: 0

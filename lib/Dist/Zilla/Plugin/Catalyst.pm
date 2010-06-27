@@ -37,9 +37,19 @@ Please read the SubmittingPatches file included with this Distribution. Patches
 that are of sufficient quality, within the goals of the project and pass the
 checklist will probably be accepted.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Caleb Cushing <xenoterracide@gmail.com>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

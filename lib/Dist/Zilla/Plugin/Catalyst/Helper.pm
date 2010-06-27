@@ -62,9 +62,19 @@ version 0.01
 this is used to override methods in L<Catalyst::Helper> so that it works
 better with dzil.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Caleb Cushing <xenoterracide@gmail.com>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
