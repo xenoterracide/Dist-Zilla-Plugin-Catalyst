@@ -68,6 +68,16 @@ Now you can run the following command to create a skeleton catalyst app.
 
 Obviously C<MyApp> is arbitrary and can be named whatever you like.
 
+=head1 METHODS
+
+=over
+
+=item * make_module
+
+required see L<Dist::Zilla::Role::ModuleMaker>
+
+=back
+
 =head1 BUGS
 
 or features depending on your opinion and the nature of the issue. The
