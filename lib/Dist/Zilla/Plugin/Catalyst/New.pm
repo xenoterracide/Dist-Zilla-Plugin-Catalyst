@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Dist::Zilla::Plugin::Catalyst::New;
 BEGIN {
   $Dist::Zilla::Plugin::Catalyst::New::VERSION = '0.01';
