@@ -1,2 +1,5 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
+
+0.01      Jun 27 2010
+	- Initial release, patches and comments welcome
