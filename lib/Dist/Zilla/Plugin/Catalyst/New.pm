@@ -11,7 +11,7 @@ with qw( Dist::Zilla::Role::ModuleMaker );
 use Dist::Zilla::File::FromCode;
 
 sub make_module {
-	my ( $self, $arg ) = @_;
+	my ( $self ) = @_;
 
 	my $name = $self->zilla->name;
 	$name =~ s/-/::/g;
