@@ -40,3 +40,11 @@ sub mk_file {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+# ABSTRACT: a subclass of Catalyst::Helper
+
+=head1 DESCRIPTION
+
+this is used to override methods in L<Catalyst::Helper> so that it works
+better with dzil.
+
+=cut
