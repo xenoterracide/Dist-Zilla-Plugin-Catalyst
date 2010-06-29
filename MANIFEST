@@ -4,8 +4,8 @@ MANIFEST
 META.yml
 Makefile.PL
 README
-SubmittingPatches.pod
 TODO
+docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/Catalyst.pm
 lib/Dist/Zilla/Plugin/Catalyst/Helper.pm
 lib/Dist/Zilla/Plugin/Catalyst/New.pm

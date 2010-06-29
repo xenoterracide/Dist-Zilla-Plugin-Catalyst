@@ -176,8 +176,8 @@ that starts with '-----BEGIN PGP SIGNED MESSAGE-----'.  That is
 not a text/plain, it's something else.
 
 Unless your patch is a very trivial and an obviously correct one,
-first send it with "To:" set to the mailing list, with "cc:" listing
-people who are involved in the area you are touching (the output from
+first send it with "To:" set to the RT email (or mailing list), with "cc:"
+listing people who are involved in the area you are touching (the output from
 "git blame $path" and "git shortlog --no-merges $path" would help to
 identify them), to solicit comments and reviews.  After the list
 reached a consensus that it is a good idea to apply the patch, re-send
