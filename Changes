@@ -1,4 +1,7 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
+0.02      Jul 22 2010
+	- fix perms for script/* should have been executable
+
 0.02      Jun 29 2010
 	- Updated SubmittingPatches doc and moved it's location. re-releasing to
 	  attempt to fix file conflict bug
