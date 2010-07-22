@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::Helper;
 BEGIN {
-  $Dist::Zilla::Plugin::Catalyst::Helper::VERSION = '0.04';
+  $Dist::Zilla::Plugin::Catalyst::Helper::VERSION = '0.05';
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
@@ -18,6 +18,7 @@ has _zilla_gatherer => (
 );
 
 # we don't want these to do anything
+sub _mk_changes {};
 sub _mk_makefile {};
 sub _mk_readme {};
 sub _mk_apptest {};
@@ -57,7 +58,7 @@ Dist::Zilla::Plugin::Catalyst::Helper - a subclass of Catalyst::Helper
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 
