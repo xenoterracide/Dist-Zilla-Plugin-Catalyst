@@ -10,6 +10,7 @@ use Dist::Zilla::File::FromCode;
 sub make_module {
 	my ( $self ) = @_;
 
+	# format $name to what C::Helper wants
 	my $name = $self->zilla->name;
 	$name =~ s/-/::/g;
 
@@ -22,6 +23,8 @@ sub make_module {
 			author          => $authors,
 			_zilla_gatherer => $self,
 		});
+
+	# $name here is for backcompat in older versions of C::Devel
 	$helper->mk_app( $name );
 }
 __PACKAGE__->meta->make_immutable;
