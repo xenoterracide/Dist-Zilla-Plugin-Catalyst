@@ -12,7 +12,7 @@ use Dist::Zilla::File::FromCode;
 
 sub make_module {
 	my ( $self ) = @_;
-	
+
 	if ( $Catalyst::Helper::VERSION <= 1.28 ) {
 		warn "getting authors from ENV variable AUTHOR not dzil\n";
 	}
