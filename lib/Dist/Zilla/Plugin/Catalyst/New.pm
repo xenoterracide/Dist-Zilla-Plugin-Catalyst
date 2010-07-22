@@ -10,6 +10,10 @@ use Dist::Zilla::File::FromCode;
 sub make_module {
 	my ( $self ) = @_;
 
+	if ( $Catalyst::Helper::VERSION <= 1.28 ) {
+		warn "[Catalyst::New] getting authors from ENV variable AUTHOR not dzil\n";
+	}
+
 	# format $name to what C::Helper wants
 	my $name = $self->zilla->name;
 	$name =~ s/-/::/g;
