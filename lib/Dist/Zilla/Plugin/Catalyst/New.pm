@@ -12,16 +12,26 @@ use Dist::Zilla::File::FromCode;
 
 sub make_module {
 	my ( $self ) = @_;
+	
+	if ( $Catalyst::Helper::VERSION <= 1.28 ) {
+		warn "getting authors from ENV variable AUTHOR not dzil\n";
+	}
 
+	# format $name to what C::Helper wants
 	my $name = $self->zilla->name;
 	$name =~ s/-/::/g;
 
+	# turn authors into a scalar it's what C::Helper wants
+	my $authors = join( ',', @{$self->zilla->authors} );
+
 	my $helper
 		= Dist::Zilla::Plugin::Catalyst::Helper->new({
-# this is how we should do it but it does nothing... probably upstream bug
-#			name            => $name,
+			name            => $name,
+			author          => $authors,
 			_zilla_gatherer => $self,
 		});
+
+	# $name here is for backcompat in older versions of C::Devel
 	$helper->mk_app( $name );
 }
 __PACKAGE__->meta->make_immutable;
