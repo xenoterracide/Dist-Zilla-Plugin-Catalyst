@@ -32,15 +32,13 @@ sub mk_file {
 	my $name = "$file_obj";
 	$name =~ s{[\w-]+/}{};
 
-	my $mode = 0755 if $name =~ /script/;
-
 	my $file
 		= Dist::Zilla::File::InMemory->new({
 			name    => $name,
 			content => $output,
 		});
 
-	$file->mode( $mode ) if $mode;
+	$file->mode( 0755 ) if $file->name =~ /script/;
 
 	$self->_zilla_add_file($file);
 }
