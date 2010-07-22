@@ -13,10 +13,13 @@ sub make_module {
 	my $name = $self->zilla->name;
 	$name =~ s/-/::/g;
 
+	# turn authors into a scalar it's what C::Helper wants
+	my $authors = join( ',', @{$self->zilla->authors} );
+
 	my $helper
 		= Dist::Zilla::Plugin::Catalyst::Helper->new({
-# this is how we should do it but it does nothing... probably upstream bug
-#			name            => $name,
+			name            => $name,
+			author          => $authors,
 			_zilla_gatherer => $self,
 		});
 	$helper->mk_app( $name );
