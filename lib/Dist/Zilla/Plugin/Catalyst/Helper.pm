@@ -38,7 +38,7 @@ sub mk_file {
 			content => $output,
 		});
 
-	$file->mode( 0755 ) if $file->name =~ /script/;
+	$file->mode( oct(755) ) if $file->name =~ /script/;
 
 	$self->_zilla_add_file($file);
 }
