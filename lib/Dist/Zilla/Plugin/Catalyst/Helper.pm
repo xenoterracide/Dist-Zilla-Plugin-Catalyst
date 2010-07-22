@@ -15,6 +15,7 @@ has _zilla_gatherer => (
 );
 
 # we don't want these to do anything
+sub _mk_changes {};
 sub _mk_makefile {};
 sub _mk_readme {};
 sub _mk_apptest {};
