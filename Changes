@@ -1,6 +1,9 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
 
+0.05      Jul 22 2010
+	- No longer output the Catalyst templated Changes file
+
 0.04      Jul 22 2010
 	- add support to get author from config.ini
 
