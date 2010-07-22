@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
-0.03      Jul 22 2010
+0.04      Jul 22 2010
+	- add support to get author from config.ini
 
 0.03      Jul 22 2010
 	- fix perms for script/* should have been executable
