@@ -19,6 +19,8 @@ sub _mk_changes {};
 sub _mk_makefile {};
 sub _mk_readme {};
 sub _mk_apptest {};
+sub _mk_podtest {};
+sub _mk_podcoveragetest {};
 
 sub mk_file {
 	my ( $self, $file_obj , $output ) = @_;
