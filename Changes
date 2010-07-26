@@ -1,4 +1,8 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
+0.06      Jul 26 2010
+	- don't create pod tests which have seperate functions in newer versions
+	  of Catalyst::Devel
+
 0.05      Jul 22 2010
 	- No longer output the Catalyst templated Changes file
 

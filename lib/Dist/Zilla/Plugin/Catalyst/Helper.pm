@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::Helper;
 BEGIN {
-  $Dist::Zilla::Plugin::Catalyst::Helper::VERSION = '0.05';
+  $Dist::Zilla::Plugin::Catalyst::Helper::VERSION = '0.06';
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
@@ -22,6 +22,8 @@ sub _mk_changes {};
 sub _mk_makefile {};
 sub _mk_readme {};
 sub _mk_apptest {};
+sub _mk_podtest {};
+sub _mk_podcoveragetest {};
 
 sub mk_file {
 	my ( $self, $file_obj , $output ) = @_;
@@ -58,7 +60,7 @@ Dist::Zilla::Plugin::Catalyst::Helper - a subclass of Catalyst::Helper
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 
