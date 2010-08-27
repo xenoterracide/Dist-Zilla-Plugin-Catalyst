@@ -6,8 +6,8 @@ Makefile.PL
 README
 TODO
 docs/SubmittingPatches.pod
+lib/Dist/Zilla/CatalystHelper.pm
 lib/Dist/Zilla/Plugin/Catalyst.pm
-lib/Dist/Zilla/Plugin/Catalyst/Helper.pm
 lib/Dist/Zilla/Plugin/Catalyst/New.pm
 t/00-compile.t
 t/000-report-versions.t

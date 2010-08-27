@@ -1,4 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
+0.06      Aug 27 2010
+
 0.06      Jul 26 2010
 	- don't create pod tests which have seperate functions in newer versions
 	  of Catalyst::Devel

@@ -5,7 +5,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Catalyst::New::VERSION = '0.06';
 }
 use Moose;
-use Dist::Zilla::Plugin::Catalyst::Helper;
+use Dist::Zilla::CatalystHelper;
 with qw( Dist::Zilla::Role::ModuleMaker );
 
 use Dist::Zilla::File::FromCode;
@@ -25,7 +25,7 @@ sub make_module {
 	my $authors = join( ',', @{$self->zilla->authors} );
 
 	my $helper
-		= Dist::Zilla::Plugin::Catalyst::Helper->new({
+		= Dist::Zilla::CatalystHelper->new({
 			name            => $name,
 			author          => $authors,
 			_zilla_gatherer => $self,
