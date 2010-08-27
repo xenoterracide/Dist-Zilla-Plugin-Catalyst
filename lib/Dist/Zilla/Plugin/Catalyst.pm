@@ -2,9 +2,8 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst;
 BEGIN {
-  $Dist::Zilla::Plugin::Catalyst::VERSION = '0.06';
+	our $VERSION = 0.06;# VERSION
 }
-
 1;
 # ABSTRACT: set of plugins for working with Catalyst
 
