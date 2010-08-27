@@ -1,6 +1,9 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::New;
+BEGIN {
+	# VERSION
+}
 use Moose;
 use Dist::Zilla::Plugin::Catalyst::Helper;
 with qw( Dist::Zilla::Role::ModuleMaker );

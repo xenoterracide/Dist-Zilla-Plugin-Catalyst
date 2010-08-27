@@ -1,6 +1,9 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::Helper;
+BEGIN {
+	# VERSION
+}
 use Moose;
 use Dist::Zilla::File::InMemory;
 

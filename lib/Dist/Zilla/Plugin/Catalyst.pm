@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst;
-
+BEGIN {
+	# VERSION
+}
 1;
 # ABSTRACT: set of plugins for working with Catalyst
 
