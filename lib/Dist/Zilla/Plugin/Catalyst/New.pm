@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::New;
 BEGIN {
-	our $VERSION = 0.06;# VERSION
+	our $VERSION = 0.07;# VERSION
 }
 use Moose;
 use Dist::Zilla::Plugin::Catalyst::Helper;
@@ -49,7 +49,7 @@ Dist::Zilla::Plugin::Catalyst::New - create a new catalyst project with dzil new
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
