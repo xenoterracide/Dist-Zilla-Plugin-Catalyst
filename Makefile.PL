@@ -17,8 +17,10 @@ my %WriteMakefileArgs = (
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
+    'Path::Class' => '0',
     'Scalar::Util' => '0',
     'Test::More' => '0.94',
+    'boolean' => '0',
     'perl' => '5.004'
   },
   'CONFIGURE_REQUIRES' => {

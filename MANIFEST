@@ -5,12 +5,14 @@ META.yml
 Makefile.PL
 README
 TODO
+corpus/mint/config.ini
+corpus/mint/profiles/default/profile.ini
 docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/Catalyst.pm
 lib/Dist/Zilla/Plugin/Catalyst/Helper.pm
 lib/Dist/Zilla/Plugin/Catalyst/New.pm
-t/00-basic.t
 t/00-compile.t
+t/00-files-exist.t
 t/000-report-versions.t
 t/author-critic.t
 t/release-dist-manifest.t
