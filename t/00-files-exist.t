@@ -9,7 +9,7 @@ use boolean;
 my $tzil = Minter->_new_from_profile(
 	[ Default => 'default' ],
 	{ name => 'CatApp', },
-	{ global_config_root = dir('corpus/mint')->absolute },
+	{ global_config_root => dir('corpus/mint')->absolute },
 );
 
 $tzil->mint_dist;
