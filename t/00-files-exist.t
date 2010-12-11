@@ -16,8 +16,6 @@ $tzil->mint_dist;
 
 my $mint_root = dir( $tzil->tempdir )->subdir('mint');
 
-my $exists =  ( -e "$mint_root/CatApp.pm" )  ? true : false;
-
-ok( $exists, true, 'CatApp.pm exists' );
+ok( -e $mint_root->file('CatApp.pm'), 'CatApp.pm exists' );
 
 done_testing;
