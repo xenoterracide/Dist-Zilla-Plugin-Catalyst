@@ -11,7 +11,7 @@ my $tzil = Minter->_new_from_profile(
 	{ global_config_root => dir('corpus/mint')->absolute },
 );
 
-$tzil->mint_dokt;
+$tzil->mint_dist;
 
 # mint root
 my $mr   = dir( $tzil->tempdir )->subdir('mint');
