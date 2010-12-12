@@ -20,17 +20,31 @@ my $mrs  = $mr->subdir('script');
 my $mrr  = $mr->subdir('root');
 my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
-is( -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
-is( -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
-is( -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
-is( -e $mr->file('catapp.conf'),      'catapp.conf exists');
+is(   -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
+isnt( -x $mrl->file('CatApp.pm'), 'CatApp.pm isnt executable');
+
+is(   -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
+isnt( -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller isnt executable');
+
+is(   -e $mr->file('catapp.conf'),      'catapp.conf exists');
+isnt( -x $mr->file('catapp.conf'),      'catapp.conf isnt executable');
 
 # test scripts
 is( -e $mrs->file('catapp_cgi.pl'),     '_cgi.pl exists');
+is( -x $mrs->file('catapp_cgi.pl'),     '_cgi.pl is executable');
+
 is( -e $mrs->file('catapp_create.pl'),  '_create.pl exists');
+is( -x $mrs->file('catapp_create.pl'),  '_create.pl is executable');
+
 is( -e $mrs->file('catapp_fastcgi.pl'), '_fastcgi.pl exists');
+is( -x $mrs->file('catapp_fastcgi.pl'), '_fastcgi.pl is executable');
+
 is( -e $mrs->file('catapp_server.pl'),  '_server.pl exists');
+is( -x $mrs->file('catapp_server.pl'),  '_server.pl is executable');
+
 is( -e $mrs->file('catapp_test.pl'),    '_test.pl exists');
+is( -x $mrs->file('catapp_server.pl'),  '_server.pl is executable');
+
 # test root and images
 is( -e $mrr->file('favicon.ico'),                    'favicon.ico exists');
 is( -e $mrri->file('btn_120x50_built.png'),          'btn_120x50_built.png exists');
