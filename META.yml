@@ -16,12 +16,15 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.102345, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.102346, CPAN::Meta::Converter version 2.102400'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Dist-Zilla-Plugin-Catalyst
+no_index:
+  directory:
+    - corpus
 requires:
   Catalyst::Helper: 0
   Dist::Zilla::File::FromCode: 0
@@ -31,4 +34,4 @@ requires:
 resources:
   bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst.git
-version: 0.07
+version: 0.08

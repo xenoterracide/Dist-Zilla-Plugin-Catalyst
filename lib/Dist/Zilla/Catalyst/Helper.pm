@@ -1,8 +1,8 @@
 use strict;
 use warnings;
-package Dist::Zilla::Plugin::Catalyst::Helper;
+package Dist::Zilla::Catalyst::Helper;
 BEGIN {
-	our $VERSION = 0.07;# VERSION
+	our $VERSION = 0.08;# VERSION
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
@@ -56,11 +56,11 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::Plugin::Catalyst::Helper - a subclass of Catalyst::Helper
+Dist::Zilla::Catalyst::Helper - a subclass of Catalyst::Helper
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 DESCRIPTION
 

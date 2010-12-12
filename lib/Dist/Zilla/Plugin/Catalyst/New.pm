@@ -2,10 +2,10 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::Catalyst::New;
 BEGIN {
-	our $VERSION = 0.07;# VERSION
+	our $VERSION = 0.08;# VERSION
 }
 use Moose;
-use Dist::Zilla::Plugin::Catalyst::Helper;
+use Dist::Zilla::Catalyst::Helper;
 with qw( Dist::Zilla::Role::ModuleMaker );
 
 use Dist::Zilla::File::FromCode;
@@ -25,7 +25,7 @@ sub make_module {
 	my $authors = join( ',', @{$self->zilla->authors} );
 
 	my $helper
-		= Dist::Zilla::Plugin::Catalyst::Helper->new({
+		= Dist::Zilla::Catalyst::Helper->new({
 			name            => $name,
 			author          => $authors,
 			_zilla_gatherer => $self,
@@ -49,7 +49,7 @@ Dist::Zilla::Plugin::Catalyst::New - create a new catalyst project with dzil new
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
