@@ -20,14 +20,14 @@ my $mrs  = $mr->subdir('script');
 my $mrr  = $mr->subdir('root');
 my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
-    ok( -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
-not ok( -x $mrl->file('CatApp.pm'), 'CatApp.pm isnt executable');
+ok(     -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
+ok( not -x $mrl->file('CatApp.pm'), 'CatApp.pm isnt executable');
 
-    ok( -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
-not ok( -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller isnt executable');
+ok(     -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
+ok( not -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller isnt executable');
 
-    ok(   -e $mr->file('catapp.conf'),      'catapp.conf exists');
-not ok( -x $mr->file('catapp.conf'),      'catapp.conf isnt executable');
+ok(     -e $mr->file('catapp.conf'),      'catapp.conf exists');
+ok( not -x $mr->file('catapp.conf'),      'catapp.conf isnt executable');
 
 # test scripts
 ok( -e $mrs->file('catapp_cgi.pl'),     '_cgi.pl exists');
