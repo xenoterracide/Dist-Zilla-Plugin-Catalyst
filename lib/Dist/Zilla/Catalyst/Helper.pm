@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-package Dist::Zilla::Plugin::Catalyst::Helper;
+package Dist::Zilla::Catalyst::Helper;
 BEGIN {
 	# VERSION
 }
