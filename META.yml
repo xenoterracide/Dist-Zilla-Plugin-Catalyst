@@ -5,7 +5,7 @@ author:
   - 'Tomas Doran <bobtfish@bobtfish.net>'
 build_requires:
   Carp: 0
-  Dist::Zilla::Tester: 0
+  Dokt::Zilla::Tester: 0
   English: 0
   File::Find: 0
   File::Temp: 0
