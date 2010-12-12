@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Dokt::Zilla::Tester;
+use Dist::Zilla::Tester;
 use Test::More;
 use Path::Class;
 
