@@ -6,6 +6,7 @@ BEGIN {
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
+use Path::Class;
 use Data::Dumper;
 
 extends 'Catalyst::Helper';

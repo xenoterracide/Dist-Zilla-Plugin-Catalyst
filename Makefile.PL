@@ -17,7 +17,6 @@ my %WriteMakefileArgs = (
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
-    'Path::Class' => '0',
     'Scalar::Util' => '0',
     'Test::More' => '0.94',
     'perl' => '5.004'
@@ -35,7 +34,8 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::File::FromCode' => '0',
     'Dist::Zilla::File::InMemory' => '0',
     'Dist::Zilla::Role::ModuleMaker' => '0',
-    'Moose' => '0'
+    'Moose' => '0',
+    'Path::Class' => '0'
   },
   'VERSION' => '0.09',
   'test' => {
