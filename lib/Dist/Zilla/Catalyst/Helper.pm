@@ -6,6 +6,7 @@ BEGIN {
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
+use Path::Class;
 
 extends 'Catalyst::Helper';
 
@@ -32,12 +33,17 @@ sub mk_file {
 	# {dist_repo} name which dzil already creates if we don't regex it out we
 	# end up with {dist_repo}/{dist_repo}/{files} instead of just
 	# {dist_repo}/{files}
-	my $name = "$file_obj";
-	$name =~ s{[\w-]+/}{};
+	my $cat_file = file( "$file_obj" );
+	my $cat_dir  = $cat_file->dir;
+	my @path     = $cat_dir->dir_list;
+	shift @path;
+
+	# ok so this isn't really just a name, but that's what we're using it for
+	my $name = file( @path, $cat_file->basename );
 
 	my $file
 		= Dist::Zilla::File::InMemory->new({
-			name    => $name,
+			name    => $name->stringify,
 			content => $output,
 		});
 
