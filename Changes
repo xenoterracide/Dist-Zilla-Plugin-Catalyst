@@ -1,4 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
+0.09      Jan 03 2011
+
 0.08      Dec 12 2010
 	- API: Rename DZ::Plugin::Catalyst::Helper to DZ::Catalyst::Helper. It's
 	  not really a Plugin, but a subclass of Catalyst::Helper.

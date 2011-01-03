@@ -2,10 +2,11 @@ use strict;
 use warnings;
 package Dist::Zilla::Catalyst::Helper;
 BEGIN {
-	our $VERSION = 0.08;# VERSION
+	our $VERSION = 0.09;# VERSION
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
+use Data::Dumper;
 
 extends 'Catalyst::Helper';
 
@@ -32,12 +33,17 @@ sub mk_file {
 	# {dist_repo} name which dzil already creates if we don't regex it out we
 	# end up with {dist_repo}/{dist_repo}/{files} instead of just
 	# {dist_repo}/{files}
-	my $name = "$file_obj";
-	$name =~ s{[\w-]+/}{};
+	my @path = $file_obj->dir;
+
+	shift @path;
+
+	my $name = file( @path, $file_obj->file );
+
+	print Dumper($name);
 
 	my $file
 		= Dist::Zilla::File::InMemory->new({
-			name    => $name,
+			name    => "$name",
 			content => $output,
 		});
 
@@ -60,7 +66,7 @@ Dist::Zilla::Catalyst::Helper - a subclass of Catalyst::Helper
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 
