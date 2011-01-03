@@ -23,8 +23,14 @@ my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 ok(   -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
 ok( ! -x $mrl->file('CatApp.pm'), 'CatApp.pm isnt executable');
 
-ok(   -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
-ok( ! -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller isnt executable');
+ok(
+	-e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm')
+	, 'controller exists'
+);
+ok(
+	! -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm')
+	, 'controller isnt executable'
+);
 
 ok(   -e $mr->file('catapp.conf'),      'catapp.conf exists');
 ok( ! -x $mr->file('catapp.conf'),      'catapp.conf isnt executable');
