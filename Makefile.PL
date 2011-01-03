@@ -30,7 +30,6 @@ my %WriteMakefileArgs = (
   'NAME' => 'Dist::Zilla::Plugin::Catalyst',
   'PREREQ_PM' => {
     'Catalyst::Helper' => '0',
-    'Data::Dumper' => '0',
     'Dist::Zilla::File::FromCode' => '0',
     'Dist::Zilla::File::InMemory' => '0',
     'Dist::Zilla::Role::ModuleMaker' => '0',
