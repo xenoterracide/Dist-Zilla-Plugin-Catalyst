@@ -33,7 +33,7 @@ sub mk_file {
 	# {dist_repo} name which dzil already creates if we don't regex it out we
 	# end up with {dist_repo}/{dist_repo}/{files} instead of just
 	# {dist_repo}/{files}
-	my @path = $file_obj->dir_list;
+	my $cat_dir = $file_obj->dir->dir_list;
 
 	shift @path;
 
