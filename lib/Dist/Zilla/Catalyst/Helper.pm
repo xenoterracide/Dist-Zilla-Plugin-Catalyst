@@ -37,7 +37,7 @@ sub mk_file {
 
 	shift @path;
 
-	my $name = file( @path, $file_obj->file );
+	my $name = file( @path, $file_obj->basename );
 
 	print Dumper($name);
 
