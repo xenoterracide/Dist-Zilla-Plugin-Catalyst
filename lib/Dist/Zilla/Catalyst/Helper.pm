@@ -36,9 +36,9 @@ sub mk_file {
 	my $cat_file = file( "$file_obj" );
 	my $cat_dir  = $cat_file->dir;
 	my @path     = $cat_dir->dir_list;
-
 	shift @path;
 
+	# ok so this isn't really just a name, but that's what we're using it for
 	my $name = file( @path, $cat_file->basename );
 
 	my $file
