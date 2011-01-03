@@ -33,12 +33,13 @@ sub mk_file {
 	# {dist_repo} name which dzil already creates if we don't regex it out we
 	# end up with {dist_repo}/{dist_repo}/{files} instead of just
 	# {dist_repo}/{files}
-	my $cat_dir = $file_obj->dir;
+	my $cat_dir  = dir(  "$file_obj" );
+	my $cat_file = file( "$file_obj" );
 	my @path    = $cat_dir->dir_list;
 
 	shift @path;
 
-	my $name = file( @path, $file_obj->basename );
+	my $name = file( @path, $cat_file->basename );
 
 	my $file
 		= Dist::Zilla::File::InMemory->new({
