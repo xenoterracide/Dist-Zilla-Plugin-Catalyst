@@ -20,9 +20,9 @@ my $mrs  = $mr->subdir('script');
 my $mrr  = $mr->subdir('root');
 my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
-ok(   -e $mr->file('catapp.conf'),      'catapp.conf exists');
-ok(   -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
-ok(   -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
+ok( -e $mr->file('catapp.conf'),      'catapp.conf exists');
+ok( -e $mrl->file('CatApp.pm'), 'CatApp.pm exists');
+ok( -e $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm'), 'controller exists');
 
 # test scripts
 ok( -e $mrs->file('catapp_cgi.pl'),     '_cgi.pl exists');
