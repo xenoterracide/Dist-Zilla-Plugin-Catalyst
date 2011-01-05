@@ -43,39 +43,42 @@ ok( -e $mrri->file('btn_88x31_powered.png'),         'btn_88x31_powered.png exis
 ok( -e $mrri->file('btn_88x31_powered_shadow.png'),  'btn_88x31_powered_shadow.png');
 ok( -e $mrri->file('catalyst_logo.png'),             'catalyst_logo.png exists');
 
-# test script executability, skip on win32
-unless ( $^O eq 'MSWin32' ) {
+SKIP: {
+	skip 'skip failing executable tests on windows ', 8, if $^O eq 'MSWin32';
+	# check that these are not executable ( small sampling of the above files
+	# to make sure it's not over chmoding perms )
 	ok(
 		! -x $mrl->file('CatApp.pm')
-		, 'CatApp.pm isnt executable'
+		, 'CatApp.pm is executable'
 	);
 	ok(
 		! -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm')
-		, 'controller isnt executable'
+		, 'controller is executable'
 	);
 	ok(
 		! -x $mr->file('catapp.conf')
-		, 'catapp.conf isnt executable'
+		, 'catapp.conf is executable'
 	);
+	# check these are executable
 	ok(
 		-x $mrs->file('catapp_cgi.pl'),
-		'_cgi.pl is executable'
+		'_cgi.pl is not executable'
 	);
 	ok(
 		-x $mrs->file('catapp_create.pl')
-		, '_create.pl is executable'
+		, '_create.pl is not executable'
 	);
 	ok(
 		-x $mrs->file('catapp_fastcgi.pl'),
-		'_fastcgi.pl is executable'
+		'_fastcgi.pl is not executable'
 	);
 	ok(
 		-x $mrs->file('catapp_server.pl'),
-		'_server.pl is executable'
+		'_server.pl is not executable'
 	);
 	ok(
 		-x $mrs->file('catapp_server.pl'),
-		'_server.pl is executable'
+		'_server.pl is no executable'
 	);
 }
 done_testing;
