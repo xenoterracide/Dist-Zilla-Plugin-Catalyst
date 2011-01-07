@@ -14,6 +14,7 @@ t/00-compile.t
 t/000-report-versions.t
 t/01-check-files.t
 t/author-critic.t
+t/release-check-changes.t
 t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-eol.t
