@@ -2,6 +2,7 @@ Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
 
 0.10      Jan 05 2011
+	- skip executable tests on windows
 
 0.09      Jan 03 2011
 	- move to use Path::Class for OS independant code
