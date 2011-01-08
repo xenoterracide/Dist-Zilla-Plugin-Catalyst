@@ -7,7 +7,7 @@ use Path::Class;
 
 my $tzil = Minter->_new_from_profile(
 	[ Default => 'default' ],
-	{ name => 'CatApp', },
+	{ name => 'CatApp' },
 	{ global_config_root => dir('corpus/mint')->absolute },
 );
 
