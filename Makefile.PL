@@ -6,6 +6,8 @@ use warnings;
 
 use ExtUtils::MakeMaker 6.31;
 
+use File::ShareDir::Install;
+install_share module => "Dist::Zilla::MintingProfile::Catalyst", "profiles";
 
 
 my %WriteMakefileArgs = (
@@ -22,7 +24,8 @@ my %WriteMakefileArgs = (
     'perl' => '5.004'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.31',
+    'File::ShareDir::Install' => '0.03'
   },
   'DISTNAME' => 'Dist-Zilla-Plugin-Catalyst',
   'EXE_FILES' => [],
@@ -32,9 +35,11 @@ my %WriteMakefileArgs = (
     'Catalyst::Helper' => '0',
     'Dist::Zilla::File::FromCode' => '0',
     'Dist::Zilla::File::InMemory' => '0',
+    'Dist::Zilla::Role::MintingProfile::ShareDir' => '0',
     'Dist::Zilla::Role::ModuleMaker' => '0',
     'Moose' => '0',
-    'Path::Class' => '0'
+    'Path::Class' => '0',
+    'namespace::autoclean' => '0'
   },
   'VERSION' => '0.11',
   'test' => {
@@ -61,5 +66,8 @@ delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
 
 WriteMakefile(%WriteMakefileArgs);
 
+package
+MY;
+use File::ShareDir::Install qw(postamble);
 
 

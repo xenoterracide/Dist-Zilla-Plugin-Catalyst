@@ -19,12 +19,20 @@ Dist::Zilla::Plugin::Catalyst - set of plugins for working with Catalyst
 
 version 0.11
 
+=head1 SYNOPSIS
+
+for quick start
+
+	dzil new -P Catalyst <ProjectName>
+
 =head1 DESCRIPTION
 
 The following is a list of plugins in this distribution to help you integrate
 L<Catalyst> and L<Dist::Zilla>
 
 =over
+
+=item * L<Dist::Zilla::Plugin::MinterProfile::Catalyst> Default Minting profile
 
 =item * L<Dist::Zilla::Plugin::Catalyst::New> Create a new Catalyst Project
 
