@@ -4,8 +4,8 @@ MANIFEST
 META.yml
 Makefile.PL
 README
-corpus/mint/config.ini
-corpus/mint/profiles/default/profile.ini
+corpus/user_profile/config.ini
+corpus/user_profile/profiles/default/profile.ini
 docs/SubmittingPatches.pod
 lib/Dist/Zilla/Catalyst/Helper.pm
 lib/Dist/Zilla/Plugin/Catalyst.pm
