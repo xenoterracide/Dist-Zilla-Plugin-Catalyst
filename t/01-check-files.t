@@ -8,13 +8,13 @@ use Path::Class;
 my $tzil = Minter->_new_from_profile(
 	[ Default => 'default' ],
 	{ name => 'CatApp', },
-	{ global_config_root => dir('corpus/mint')->absolute },
+	{ global_config_root => dir('corpus/user_profile')->absolute },
 );
 
 $tzil->mint_dist;
 
 # mint root
-my $mr   = dir( $tzil->tempdir )->subdir('mint');
+my $mr   = dir( $tzil->tempdir )->subdir('user_profile');
 my $mrl  = $mr->subdir('lib');
 my $mrs  = $mr->subdir('script');
 my $mrr  = $mr->subdir('root');
