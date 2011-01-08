@@ -53,36 +53,36 @@ SKIP: {
 	# to make sure it's not over chmoding perms )
 	ok(
 		! -x $mrl->file('CatApp.pm')
-		, 'CatApp.pm is executable'
+		, 'CatApp.pm is not executable'
 	);
 	ok(
 		! -x $mrl->subdir('CatApp')->subdir('Controller')->file('Root.pm')
-		, 'controller is executable'
+		, 'controller is not executable'
 	);
 	ok(
 		! -x $mr->file('catapp.conf')
-		, 'catapp.conf is executable'
+		, 'catapp.conf is not executable'
 	);
 	# check these are executable
 	ok(
 		-x $mrs->file('catapp_cgi.pl'),
-		'_cgi.pl is not executable'
+		'_cgi.pl is executable'
 	);
 	ok(
 		-x $mrs->file('catapp_create.pl')
-		, '_create.pl is not executable'
+		, '_create.pl is executable'
 	);
 	ok(
 		-x $mrs->file('catapp_fastcgi.pl'),
-		'_fastcgi.pl is not executable'
+		'_fastcgi.pl is executable'
 	);
 	ok(
 		-x $mrs->file('catapp_server.pl'),
-		'_server.pl is not executable'
+		'_server.pl is executable'
 	);
 	ok(
 		-x $mrs->file('catapp_server.pl'),
-		'_server.pl is no executable'
+		'_server.pl is executable'
 	);
 }
 done_testing;
