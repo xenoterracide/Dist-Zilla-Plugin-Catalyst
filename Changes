@@ -1,6 +1,9 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
 
+0.11      Jan 08 2011
+	- add MinterProfile::Catalyst for quickstart
+
 0.10      Jan 05 2011
 	- skip executable tests on windows
 
