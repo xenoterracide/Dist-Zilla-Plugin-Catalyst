@@ -1,5 +1,5 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
-0.11      Jan 07 2011
+0.11      Jan 08 2011
 
 0.10      Jan 05 2011
 	- skip executable tests on windows
