@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 0.12      Jan 08 2011
+	- skip tests on devel moose
 
 0.11      Jan 08 2011
 	- add MinterProfile::Catalyst for quickstart
