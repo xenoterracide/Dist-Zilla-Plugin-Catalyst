@@ -10,8 +10,8 @@ BEGIN {
 
 use Test::More;
 
-eval "use Pod::Wordlist::hanekomu";
-plan skip_all => "Pod::Wordlist::hanekomu required for testing POD spelling"
+eval "use Pod::Wordlist";
+plan skip_all => "Pod::Wordlist required for testing POD spelling"
   if $@;
 
 eval "use Test::Spelling";
@@ -19,5 +19,11 @@ plan skip_all => "Test::Spelling required for testing POD spelling"
   if $@;
 
 
-
+add_stopwords(<DATA>);
 all_pod_files_spelling_ok('lib');
+__DATA__
+Cushing
+Doran
+SubmittingPatches
+dzil
+ini
