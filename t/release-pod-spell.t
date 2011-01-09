@@ -10,8 +10,8 @@ BEGIN {
 
 use Test::More;
 
-eval "use Pod::Wordlist::Hanekomu";
-plan skip_all => "Pod::Wordlist::Hanekomu required for testing POD spelling"
+eval "use Pod::Wordlist::hanekomu";
+plan skip_all => "Pod::Wordlist::hanekomu required for testing POD spelling"
   if $@;
 
 eval "use Test::Spelling";
