@@ -26,4 +26,3 @@ Cushing
 Doran
 SubmittingPatches
 dzil
-ini
