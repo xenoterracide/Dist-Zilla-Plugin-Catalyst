@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::Catalyst - set of plugins for working with Catalyst
 
 VERSION
-    version 0.12
+    version 0.13
 
 SYNOPSIS
     for quick start
