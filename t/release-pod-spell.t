@@ -27,3 +27,5 @@ Doran
 SubmittingPatches
 dzil
 ini
+README
+plugins
