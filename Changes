@@ -1,5 +1,5 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
-0.13      Jan 09 2011
+0.13      Jan 13 2011
 
 0.12      Jan 08 2011
 	- skip tests on devel moose
