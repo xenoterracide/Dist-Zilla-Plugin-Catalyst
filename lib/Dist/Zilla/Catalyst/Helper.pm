@@ -22,7 +22,6 @@ has _zilla_gatherer => (
 sub _mk_changes {};
 sub _mk_makefile {};
 sub _mk_readme {};
-sub _mk_apptest {};
 sub _mk_podtest {};
 sub _mk_podcoveragetest {};
 sub mk_dir {};

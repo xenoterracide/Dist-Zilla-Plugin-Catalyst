@@ -20,8 +20,9 @@ $tzil->mint_dist;
 # mint root
 my $mr   = dir( $tzil->tempdir )->subdir('mint');
 my $mrl  = $mr->subdir('lib');
-my $mrs  = $mr->subdir('script');
 my $mrr  = $mr->subdir('root');
+my $mrs  = $mr->subdir('script');
+my $mrt  = $mr->subdir('t');
 my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
 ok( -e $mr->file('catapp.conf'),      'catapp.conf exists');
@@ -46,6 +47,9 @@ ok( -e $mrri->file('btn_88x31_built_shadow.png'),    'btn_88x31_built_shadow.png
 ok( -e $mrri->file('btn_88x31_powered.png'),         'btn_88x31_powered.png exists');
 ok( -e $mrri->file('btn_88x31_powered_shadow.png'),  'btn_88x31_powered_shadow.png');
 ok( -e $mrri->file('catalyst_logo.png'),             'catalyst_logo.png exists');
+
+# tests
+ok( -e $mrt->file('01app.t'), 'app test exists');
 
 SKIP: {
 	skip 'skip failing executable tests on windows ', 8, if $^O eq 'MSWin32';
