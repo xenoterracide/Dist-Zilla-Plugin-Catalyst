@@ -49,7 +49,9 @@ ok( -e $mrri->file('btn_88x31_powered_shadow.png'),  'btn_88x31_powered_shadow.p
 ok( -e $mrri->file('catalyst_logo.png'),             'catalyst_logo.png exists');
 
 # tests
-ok( -e $mrt->file('01app.t'), 'app test exists');
+ok(   -e $mrt->file('01app.t'), 'app test exists');
+ok( ! -e $mrt->file('02pod.t'), '02pod.t does not exists');
+ok( ! -e $mrt->file('03podcoverage.t'), 'pod coverage test does not exist');
 
 SKIP: {
 	skip 'skip failing executable tests on windows ', 8, if $^O eq 'MSWin32';
