@@ -32,7 +32,7 @@ sub _cat_files_exist {
 		$mrs->file  ( $lc_app . '_test.pl'            ),
 # test root and images
 		$mrr->file  ( 'favicon.ico'                   ),
-		$$mrri->file( 'btn_120x50_built.png'          ),
+		$mrri->file( 'btn_120x50_built.png'           ),
 		$mrri->file ( 'btn_120x50_built_shadow.png'   ),
 		$mrri->file ( 'btn_120x50_powered.png'        ),
 		$mrri->file ( 'btn_120x50_powered_shadow.png' ),
