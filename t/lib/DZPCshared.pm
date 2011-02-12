@@ -8,13 +8,11 @@ use namespace::autoclean;
 has 'appname' => (
 	is       => 'ro',
 	required => 1,
-	init_arg => 'appname',
 );
 
 has 'tempdir' => (
 	is       => 'ro',
 	required => 1,
-	init_arg => 'tempdir',
 );
 
 has 'directories' => (
