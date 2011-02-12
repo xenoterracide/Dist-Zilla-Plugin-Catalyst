@@ -68,7 +68,7 @@ sub _cat_files_exec {
 # mint root
 	my $mr  = dir( $tempdir )->subdir('mint');
 	my $mrs = $mr->subdir('script');
-	
+
 	return my $cat_files = [
 # test scripts
 		$mrs->file  ( $lc_app . '_cgi.pl'     ),
