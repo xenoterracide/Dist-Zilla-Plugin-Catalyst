@@ -30,7 +30,7 @@ foreach ( @{$should_exists} ) {
 
 SKIP: {
 	skip 'skip failing executable tests on windows ', 8, if $^O eq 'MSWin32';
-	my $should_exec   = _cat_files_exec ( $tzil->name, $tzil->tempdir );
+	my $should_exec = _cat_files_exec ( $tzil->name, $tzil->tempdir );
 
 	foreach ( @{$should_exec} ) {
 		ok	( -x $_ , "$_" . ' exists' );
