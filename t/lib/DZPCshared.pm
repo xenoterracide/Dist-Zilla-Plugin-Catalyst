@@ -20,7 +20,7 @@ sub _cat_files_exist {
 
 # files
 	my $cat_files = [
-		$mr->file   ( $lc_app . 'conf'                ),
+		$mr->file   ( $lc_app . '.conf'                ),
 		$mrl->file  ( $app_name . '.pm'               ),
 		$mrl->subdir( $app_name )->subdir('Controller')->file('Root.pm'),
 

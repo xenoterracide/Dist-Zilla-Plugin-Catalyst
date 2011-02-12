@@ -24,7 +24,7 @@ $tzil->mint_dist;
 my $should_exists = _cat_files_exist( $tzil->name, $tzil->tempdir );
 
 foreach ( @{$should_exists} ) {
-	ok	( -e $_ , "$_" . 'exists' );
+	ok	( -e $_ , "$_" . ' exists' );
 }
 
 done_testing;
