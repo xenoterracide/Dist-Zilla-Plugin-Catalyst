@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package DZPCshared;
 use Path::Class;
+use parent 'Exporter';
+our @EXPORT = ( '_cat_files_exist' );
 
 sub _cat_files_exist {
 	my ( $app_name, $tempdir ) = @_;
