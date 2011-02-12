@@ -16,7 +16,7 @@ has 'tempdir' => (
 );
 
 has 'directories' => (
-	is		 => 'ro',
+	is       => 'ro',
 	required => 1,
 	lazy     => 1,
 	traits   => ['Array'],
