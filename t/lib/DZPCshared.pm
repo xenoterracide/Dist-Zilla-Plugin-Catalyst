@@ -20,6 +20,7 @@ has 'directories' => (
 	required => 1,
 	lazy     => 1,
 	traits   => ['Array'],
+	isa      => 'ArrayRef[Str]',
 	default  => sub {
 		my $self = shift;
 		my $mr   = dir( $self->tempdir )->subdir('mint');
