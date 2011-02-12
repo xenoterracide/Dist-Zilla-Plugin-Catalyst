@@ -33,7 +33,7 @@ has 'directories' => (
 			my $mrt  = $mr->subdir('t');
 			my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 		]
-	};
+	},
 );
 
 has 'scripts' => (
@@ -52,7 +52,7 @@ has 'scripts' => (
 			$mrs->file  ( $lc_app . '_server.pl'  ),
 			$mrs->file  ( $lc_app . '_test.pl'    ),
 		]
-	};
+	},
 );
 
 has 'files' => (
