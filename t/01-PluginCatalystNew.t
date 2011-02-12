@@ -11,7 +11,7 @@ use Dist::Zilla::Tester;
 use Path::Class;
 use FindBin;
 use lib "$FindBin::Bin/lib";
-use DZPCshared qw( 'DZPCshared' );
+use DZPCshared qw( '_cat_files_exist' );
 
 my $tzil = Minter->_new_from_profile(
 	[ Default => 'default' ],
