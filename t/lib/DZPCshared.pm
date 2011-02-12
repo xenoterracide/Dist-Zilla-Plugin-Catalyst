@@ -34,7 +34,6 @@ has 'directories' => (
 
 has 'scripts' => (
 	is		 => 'ro',
-	lazy     => 1,
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
@@ -52,7 +51,6 @@ has 'scripts' => (
 
 has 'files' => (
 	is		 => 'ro',
-	lazy     => 1,
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
@@ -76,6 +74,11 @@ has 'files' => (
 		];
 	},
 );
+
+sub BUILD {
+	my $self = shift;
+	$self->directories;
+}
 
 __PACKAGE__->meta->make_immutable;
 1;
