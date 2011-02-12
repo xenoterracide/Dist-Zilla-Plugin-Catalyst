@@ -20,7 +20,7 @@ sub _cat_files_exist {
 
 # files
 	my $cat_files = [
-		$mr->file   ( $lc_app . '.conf'                ),
+		$mr->file   ( $lc_app . '.conf'               ),
 		$mrl->file  ( $app_name . '.pm'               ),
 		$mrl->subdir( $app_name )->subdir('Controller')->file('Root.pm'),
 
@@ -32,7 +32,7 @@ sub _cat_files_exist {
 		$mrs->file  ( $lc_app . '_test.pl'            ),
 # test root and images
 		$mrr->file  ( 'favicon.ico'                   ),
-		$mrri->file( 'btn_120x50_built.png'           ),
+		$mrri->file ( 'btn_120x50_built.png'          ),
 		$mrri->file ( 'btn_120x50_built_shadow.png'   ),
 		$mrri->file ( 'btn_120x50_powered.png'        ),
 		$mrri->file ( 'btn_120x50_powered_shadow.png' ),
@@ -46,4 +46,33 @@ sub _cat_files_exist {
 	];
 	return $cat_files;
 }
+
+sub _cat_files_not_exist {
+	my ( $app_name, $tempdir ) = @_;
+
+	# lowercase appname
+	my $lc_app = lc $app_name;
+# mint root
+	my $mr   = dir( $tempdir )->subdir('mint');
+	my $mrl  = $mr->subdir('lib');
+	my $mrr  = $mr->subdir('root');
+	my $mrs  = $mr->subdir('script');
+	my $mrt  = $mr->subdir('t');
+	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
+}
+
+sub _cat_files_executable {
+	my ( $app_name, $tempdir ) = @_;
+
+	# lowercase appname
+	my $lc_app = lc $app_name;
+# mint root
+	my $mr   = dir( $tempdir )->subdir('mint');
+	my $mrl  = $mr->subdir('lib');
+	my $mrr  = $mr->subdir('root');
+	my $mrs  = $mr->subdir('script');
+	my $mrt  = $mr->subdir('t');
+	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
+}
+
 1;
