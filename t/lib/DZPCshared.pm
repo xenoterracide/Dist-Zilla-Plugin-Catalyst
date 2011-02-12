@@ -19,7 +19,7 @@ sub _cat_files_exist {
 	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
 # files
-	my $cat_files = (
+	my $cat_files = [
 		$mr->file   ( $lc_app . 'conf'                ),
 		$mrl->file  ( $app_name . '.pm'               ),
 		$mrl->subdir( $app_name )->subdir('Controller')->file('Root.pm'),
@@ -45,7 +45,7 @@ sub _cat_files_exist {
 		$mrt->file  ( '01app.t'                       ),
 		$mrt->file  ( '02pod.t'                       ),
 		$mrt->file  ( '03podcoverage.t'               ),
-	);
+	];
 	return $cat_files;
 }
 1;
