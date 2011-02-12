@@ -16,11 +16,11 @@ has 'tempdir' => (
 );
 
 has 'directories' => (
+	isa      => 'ArrayRef[Str]',
+	traits   => ['Array'],
 	is       => 'ro',
 	required => 1,
 	lazy     => 1,
-	traits   => ['Array'],
-	isa      => 'ArrayRef[Str]',
 	default  => sub {
 		my $self = shift;
 		my $mr   = dir( $self->tempdir )->subdir('mint');
@@ -34,8 +34,9 @@ has 'directories' => (
 );
 
 has 'scripts' => (
-	is       => 'ro',
+	isa      => 'ArrayRef[Str]',
 	traits   => ['Array'],
+	is       => 'ro',
 	default  => sub {
 		my $self = shift;
 		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
@@ -51,8 +52,9 @@ has 'scripts' => (
 );
 
 has 'files' => (
-	is       => 'ro',
+	isa      => 'ArrayRef[Str]',
 	traits   => ['Array'],
+	is       => 'ro',
 	default  => sub {
 		my $self = shift;
 		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
