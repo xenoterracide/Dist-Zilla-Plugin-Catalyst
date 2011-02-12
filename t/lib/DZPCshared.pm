@@ -3,7 +3,7 @@ use warnings;
 package DZPCshared;
 use Path::Class;
 use parent 'Exporter';
-our @EXPORT = ( '_cat_files_exist' );
+our @EXPORT = ( '_cat_files_exist', '_cat_files_exec' );
 
 sub _cat_files_exist {
 	my ( $app_name, $tempdir ) = @_;

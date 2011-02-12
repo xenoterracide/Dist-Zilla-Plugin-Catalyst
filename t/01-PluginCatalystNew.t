@@ -36,5 +36,5 @@ SKIP: {
 		ok	( -x $_ , "$_" . ' exists' );
 	}
 }
-	
+
 done_testing;
