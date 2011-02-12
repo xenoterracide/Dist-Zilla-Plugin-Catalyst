@@ -25,14 +25,13 @@ has 'directories' => (
 	isa      => 'ArrayRef[Str]',
 	default  => sub {
 		my $self = shift;
-		return my $directories = [
-			my $mr   = dir( $self->tempdir )->subdir('mint');
-			my $mrl  = $mr->subdir('lib');
-			my $mrr  = $mr->subdir('root');
-			my $mrs  = $mr->subdir('script');
-			my $mrt  = $mr->subdir('t');
-			my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
-		];
+		my $mr   = dir( $self->tempdir )->subdir('mint');
+		my $mrl  = $mr->subdir('lib');
+		my $mrr  = $mr->subdir('root');
+		my $mrs  = $mr->subdir('script');
+		my $mrt  = $mr->subdir('t');
+		my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
+		return my $directories = [ $mr, $mrl, $mrr, $mrs, $mrt, $mrri ];
 	},
 );
 
