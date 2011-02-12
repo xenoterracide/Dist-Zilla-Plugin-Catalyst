@@ -27,7 +27,8 @@ subtest 'catalyst files exist' => sub {
 	foreach ( @{$should_exists} ) {
 		ok	( -e $_ , "$_" . ' exists' );
 	}
-}
+};
+
 SKIP: {
 	skip 'skip failing executable tests on windows ', 8, if $^O eq 'MSWin32';
 	subtest 'catalyst scripts should be executable' => sub {
@@ -37,6 +38,5 @@ SKIP: {
 			ok	( -x $_ , "$_" . ' exists' );
 		}
 	}
-}
-
+};
 done_testing;
