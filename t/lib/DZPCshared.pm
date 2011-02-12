@@ -18,7 +18,6 @@ has 'tempdir' => (
 has 'directories' => (
 	is		 => 'ro',
 	required => 1,
-	lazy     => 1,
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
@@ -34,7 +33,6 @@ has 'directories' => (
 
 has 'scripts' => (
 	is		 => 'ro',
-	lazy     => 1,
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
@@ -52,7 +50,6 @@ has 'scripts' => (
 
 has 'files' => (
 	is		 => 'ro',
-	lazy     => 1,
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
