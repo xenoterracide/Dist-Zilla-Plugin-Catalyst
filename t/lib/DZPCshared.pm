@@ -37,7 +37,7 @@ has 'scripts' => (
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
-		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = $self->directories;
+		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
 		my $lc_app = lc $self->appname;
 		return my $scripts = [
 			$mrs->file  ( $lc_app . '_cgi.pl'     ),
@@ -54,7 +54,7 @@ has 'files' => (
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
-		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = $self->directories;
+		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
 		my $lc_app = lc $self->appname;
 		return my $files = [
 			$mr->file   ( $lc_app . '.conf'               ),
@@ -74,11 +74,6 @@ has 'files' => (
 		];
 	},
 );
-
-sub BUILD {
-	my $self = shift;
-	$self->directories;
-}
 
 __PACKAGE__->meta->make_immutable;
 1;
