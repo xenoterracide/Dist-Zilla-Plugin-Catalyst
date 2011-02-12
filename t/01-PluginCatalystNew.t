@@ -27,7 +27,7 @@ my $dzpcs = DZPCshared->new({
 });
 
 subtest 'catalyst files exist' => sub {
-	my $should_exists = [ $dzpcs->files, $dzpcs->scripts ];
+	my $should_exists = [ @{$dzpcs->files}, @{$dzpcs->scripts} ];
 
 	foreach ( @{$should_exists} ) {
 		ok	( -e $_ , "$_" . ' exists' );
@@ -36,7 +36,7 @@ subtest 'catalyst files exist' => sub {
 
 subtest 'catalyst scripts should be executable' => sub {
 	plan skip_all => 'skip failing executable tests on windows' if $^O eq 'MSWin32';
-	my $should_exec = $dzpcs->scripts;
+	my $should_exec = @{$dzpcs->scripts};
 
 	foreach ( @{$should_exec} ) {
 		ok	( -x $_ , "$_" . ' exists' );
