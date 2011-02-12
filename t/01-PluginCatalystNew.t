@@ -9,6 +9,8 @@ if ( $Moose::VERSION >= 1.9902 and $Moose::VERSION < 2.0 ) {
 
 use Dist::Zilla::Tester;
 use Path::Class;
+use FindBin;
+use lib "$FindBin::Bin/lib";
 
 my $tzil = Minter->_new_from_profile(
 	[ Default => 'default' ],
