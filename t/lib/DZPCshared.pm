@@ -19,7 +19,7 @@ sub _cat_files_exist {
 	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 
 # files
-	my $cat_files = [
+	return my $cat_files = [
 		$mr->file   ( $lc_app . '.conf'               ),
 		$mrl->file  ( $app_name . '.pm'               ),
 		$mrl->subdir( $app_name )->subdir('Controller')->file('Root.pm'),
@@ -44,7 +44,6 @@ sub _cat_files_exist {
 # tests
 		$mrt->file  ( '01app.t'                       ),
 	];
-	return $cat_files;
 }
 
 sub _cat_files_not_exist {
@@ -61,18 +60,23 @@ sub _cat_files_not_exist {
 	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
 }
 
-sub _cat_files_executable {
+sub _cat_files_exec {
 	my ( $app_name, $tempdir ) = @_;
 
 	# lowercase appname
 	my $lc_app = lc $app_name;
 # mint root
-	my $mr   = dir( $tempdir )->subdir('mint');
-	my $mrl  = $mr->subdir('lib');
-	my $mrr  = $mr->subdir('root');
-	my $mrs  = $mr->subdir('script');
-	my $mrt  = $mr->subdir('t');
-	my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
+	my $mr  = dir( $tempdir )->subdir('mint');
+	my $mrs = $mr->subdir('script');
+	
+	return my $cat_files = [
+# test scripts
+		$mrs->file  ( $lc_app . '_cgi.pl'     ),
+		$mrs->file  ( $lc_app . '_create.pl'  ),
+		$mrs->file  ( $lc_app . '_fastcgi.pl' ),
+		$mrs->file  ( $lc_app . '_server.pl'  ),
+		$mrs->file  ( $lc_app . '_test.pl'    ),
+	];
 }
 
 1;
