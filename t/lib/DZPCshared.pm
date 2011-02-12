@@ -34,7 +34,7 @@ has 'directories' => (
 );
 
 has 'scripts' => (
-	is		 => 'ro',
+	is       => 'ro',
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
@@ -51,7 +51,7 @@ has 'scripts' => (
 );
 
 has 'files' => (
-	is		 => 'ro',
+	is       => 'ro',
 	traits   => ['Array'],
 	default  => sub {
 		my $self = shift;
