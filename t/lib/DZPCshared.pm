@@ -43,8 +43,6 @@ sub _cat_files_exist {
 		$mrri->file ( 'catalyst_logo.png'             ),
 # tests
 		$mrt->file  ( '01app.t'                       ),
-		$mrt->file  ( '02pod.t'                       ),
-		$mrt->file  ( '03podcoverage.t'               ),
 	];
 	return $cat_files;
 }
