@@ -32,7 +32,7 @@ has 'directories' => (
 			my $mrs  = $mr->subdir('script');
 			my $mrt  = $mr->subdir('t');
 			my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
-		]
+		];
 	},
 );
 
@@ -51,7 +51,7 @@ has 'scripts' => (
 			$mrs->file  ( $lc_app . '_fastcgi.pl' ),
 			$mrs->file  ( $lc_app . '_server.pl'  ),
 			$mrs->file  ( $lc_app . '_test.pl'    ),
-		]
+		];
 	},
 );
 
@@ -66,8 +66,8 @@ has 'files' => (
 		my $lc_app = lc $self->appname;
 		return my $files = [
 			$mr->file   ( $lc_app . '.conf'               ),
-			$mrl->file  ( $app_name . '.pm'               ),
-			$mrl->subdir( $app_name )->subdir('Controller')->file('Root.pm'),
+			$mrl->file  ( $self->app_name . '.pm'               ),
+			$mrl->subdir( $self->app_name )->subdir('Controller')->file('Root.pm'),
 			$mrr->file  ( 'favicon.ico'                   ),
 			$mrri->file ( 'btn_120x50_built.png'          ),
 			$mrri->file ( 'btn_120x50_built_shadow.png'   ),
@@ -79,7 +79,7 @@ has 'files' => (
 			$mrri->file ( 'btn_88x31_powered_shadow.png'  ),
 			$mrri->file ( 'catalyst_logo.png'             ),
 			$mrt->file  ( '01app.t'                       ),
-		]
+		];
 	},
 );
 
