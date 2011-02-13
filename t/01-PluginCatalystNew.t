@@ -35,7 +35,7 @@ subtest 'catalyst files exist' => sub {
 };
 
 subtest 'catalyst scripts should be executable' => sub {
-	plan skip_all => 'skip failing executable tests on windows' if $^O eq 'MSWin32';
+	plan({ skip_all => 'skip failing executable tests on windows' }) if $^O eq 'MSWin32';
 	my $should_exec = @{$dzpcs->scripts};
 
 	foreach ( @{$should_exec} ) {
