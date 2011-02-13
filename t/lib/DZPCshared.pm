@@ -16,6 +16,7 @@ has 'tempdir' => (
 );
 
 has 'directories' => (
+	isa      => 'ArrayRef[Path::Class::Dir]',
 	traits   => ['Array'],
 	is       => 'ro',
 	required => 1,
@@ -39,27 +40,11 @@ has 'directories' => (
 	},
 );
 
-has 'scripts' => (
-	traits   => ['Array'],
-	is       => 'ro',
-	lazy     => 1,
-	default  => sub {
-		my $self = shift;
-		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
-		my $lc_app = lc $self->appname;
-		return my $scripts = [
-			$mrs->file  ( $lc_app . '_cgi.pl'     ),
-			$mrs->file  ( $lc_app . '_create.pl'  ),
-			$mrs->file  ( $lc_app . '_fastcgi.pl' ),
-			$mrs->file  ( $lc_app . '_server.pl'  ),
-			$mrs->file  ( $lc_app . '_test.pl'    ),
-		];
-	},
-);
-
 has 'files' => (
+	isa      => 'ArrayRef[Path::Class::File]',
 	traits   => ['Array'],
 	is       => 'ro',
+	required => 1,
 	lazy     => 1,
 	default  => sub {
 		my $self = shift;
@@ -80,6 +65,26 @@ has 'files' => (
 			$mrri->file ( 'btn_88x31_powered_shadow.png'  ),
 			$mrri->file ( 'catalyst_logo.png'             ),
 			$mrt->file  ( '01app.t'                       ),
+		];
+	},
+);
+
+has 'scripts' => (
+	isa      => 'ArrayRef[Path::Class::File]',
+	traits   => ['Array'],
+	is       => 'ro',
+	required => 1,
+	lazy     => 1,
+	default  => sub {
+		my $self = shift;
+		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
+		my $lc_app = lc $self->appname;
+		return my $scripts = [
+			$mrs->file  ( $lc_app . '_cgi.pl'     ),
+			$mrs->file  ( $lc_app . '_create.pl'  ),
+			$mrs->file  ( $lc_app . '_fastcgi.pl' ),
+			$mrs->file  ( $lc_app . '_server.pl'  ),
+			$mrs->file  ( $lc_app . '_test.pl'    ),
 		];
 	},
 );
