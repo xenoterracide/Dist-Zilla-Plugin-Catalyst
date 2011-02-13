@@ -16,7 +16,6 @@ has 'tempdir' => (
 );
 
 has 'directories' => (
-	isa      => 'ArrayRef[Str]',
 	traits   => ['Array'],
 	is       => 'ro',
 	required => 1,
@@ -29,14 +28,21 @@ has 'directories' => (
 		my $mrs  = $mr->subdir('script');
 		my $mrt  = $mr->subdir('t');
 		my $mrri = $mr->subdir('root')->subdir('static')->subdir('images');
-		return my $directories = [ $mr, $mrl, $mrr, $mrs, $mrt, $mrri ];
+		return my $directories = [
+			$mr,
+			$mrl,
+			$mrr,
+			$mrs,
+			$mrt,
+			$mrri,
+		];
 	},
 );
 
 has 'scripts' => (
-	isa      => 'ArrayRef[Str]',
 	traits   => ['Array'],
 	is       => 'ro',
+	lazy     => 1,
 	default  => sub {
 		my $self = shift;
 		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
@@ -52,17 +58,17 @@ has 'scripts' => (
 );
 
 has 'files' => (
-	isa      => 'ArrayRef[Str]',
 	traits   => ['Array'],
 	is       => 'ro',
+	lazy     => 1,
 	default  => sub {
 		my $self = shift;
 		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
 		my $lc_app = lc $self->appname;
 		return my $files = [
 			$mr->file   ( $lc_app . '.conf'               ),
-			$mrl->file  ( $self->app_name . '.pm'               ),
-			$mrl->subdir( $self->app_name )->subdir('Controller')->file('Root.pm'),
+			$mrl->file  ( $self->appname . '.pm'          ),
+			$mrl->subdir( $self->appname )->subdir('Controller')->file('Root.pm'),
 			$mrr->file  ( 'favicon.ico'                   ),
 			$mrri->file ( 'btn_120x50_built.png'          ),
 			$mrri->file ( 'btn_120x50_built_shadow.png'   ),
