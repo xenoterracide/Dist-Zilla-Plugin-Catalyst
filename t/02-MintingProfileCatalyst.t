@@ -42,4 +42,11 @@ subtest 'catalyst scripts should be executable' => sub {
 		ok	( -x $_ , "$_" . ' exists' );
 	}
 };
+subtest 'catalyst files shoudln\'t be executable' => sub {
+	my $shouldnt_exec = [ @{$dzpcs->files} ];
+
+	foreach ( @{$shouldnt_exec} ) {
+		ok	( ! -x $_ , "$_" . ' isn\'t executable' );
+	}
+};
 done_testing;
