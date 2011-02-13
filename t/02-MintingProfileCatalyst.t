@@ -1,13 +1,17 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Dist::Zilla::Tester;
 use Test::More;
-use Path::Class;
 
 if ( $Moose::VERSION >= 1.9902 and $Moose::VERSION < 2.0 ) {
 	plan skip_all => 'Module is broken on Devel Moose, don\'t test';
 }
+
+use Dist::Zilla::Tester;
+use Path::Class;
+use FindBin;
+use lib "$FindBin::Bin/lib";
+use DZPCshared;
 
 my $tzil = Minter->_new_from_profile(
 	[ Catalyst => 'default' ],
