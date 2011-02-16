@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+BEGIN { require 5.006; }
 
 use ExtUtils::MakeMaker 6.31;
 
@@ -19,9 +19,9 @@ my %WriteMakefileArgs = (
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
+    'FindBin' => '0',
     'Scalar::Util' => '0',
-    'Test::More' => '0.94',
-    'perl' => '5.004'
+    'Test::More' => '0.94'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31',
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'artistic_2',
   'NAME' => 'Dist::Zilla::Plugin::Catalyst',
   'PREREQ_PM' => {
-    'Catalyst::Helper' => '0',
+    'Catalyst::Helper' => '1.30',
     'Dist::Zilla::File::FromCode' => '0',
     'Dist::Zilla::File::InMemory' => '0',
     'Dist::Zilla::Role::MintingProfile::ShareDir' => '0',

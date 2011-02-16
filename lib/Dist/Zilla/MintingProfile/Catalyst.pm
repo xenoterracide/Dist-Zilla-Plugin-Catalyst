@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use 5.006;
 package Dist::Zilla::MintingProfile::Catalyst;
 BEGIN {
 	our $VERSION = 0.14;# VERSION

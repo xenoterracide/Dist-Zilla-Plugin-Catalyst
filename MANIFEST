@@ -20,6 +20,7 @@ t/000-report-versions.t
 t/01-PluginCatalystNew.t
 t/02-MintingProfileCatalyst.t
 t/author-critic.t
+t/lib/DZPCshared.pm
 t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-eol.t

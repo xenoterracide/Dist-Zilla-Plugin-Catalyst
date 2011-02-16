@@ -9,14 +9,14 @@ build_requires:
   English: 0
   File::Find: 0
   File::Temp: 0
+  FindBin: 0
   Scalar::Util: 0
   Test::More: 0.94
-  perl: 5.004
 configure_requires:
   ExtUtils::MakeMaker: 6.31
   File::ShareDir::Install: 0.03
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110440'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,7 +26,7 @@ no_index:
   directory:
     - corpus
 requires:
-  Catalyst::Helper: 0
+  Catalyst::Helper: 1.30
   Dist::Zilla::File::FromCode: 0
   Dist::Zilla::File::InMemory: 0
   Dist::Zilla::Role::MintingProfile::ShareDir: 0
@@ -34,6 +34,7 @@ requires:
   Moose: 0
   Path::Class: 0
   namespace::autoclean: 0
+  perl: 5.006
 resources:
   bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst.git
