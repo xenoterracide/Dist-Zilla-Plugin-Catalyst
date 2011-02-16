@@ -1,6 +1,13 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
 
+0.14      2011-23-16
+	- Create 01app.t
+	- rewrite changes to match CPAN::Changes::Spec
+	- rewrite tests to be more comprehensive, and more DRY
+	- Enable MetaJSON
+	- explicitly depend on Perl 5.6
+
 0.13      2011-01-16
 	- fix bug where Catalyst::Helper::mk_dir was attempting to create dirs in
 	  the location of the profile.ini for
