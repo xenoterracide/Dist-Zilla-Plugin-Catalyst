@@ -26,7 +26,7 @@ my $dzpcs = DZPCshared->new({
 	tempdir => $tzil->tempdir,
 });
 
-subtest 'catalyst files exist' => sub {
+subtest 'catalyst files that should exist' => sub {
 	my $should_exists = [ @{$dzpcs->files}, @{$dzpcs->scripts} ];
 
 	foreach ( @{$should_exists} ) {
@@ -34,16 +34,23 @@ subtest 'catalyst files exist' => sub {
 	}
 };
 
-subtest 'catalyst scripts should be executable' => sub {
+subtest 'catalyst files that shouldn\'t exist' => sub {
+	my $should_not_exist = [ @{ $dzpcs->files_not_created } ];
+	foreach ( @{ $should_not_exist } ) {
+		ok ( ! -e $_ , "$_" . ' does not exists' );
+	}
+};
+
+subtest 'catalyst scripts that should be executable' => sub {
 	plan({ skip_all => 'skip failing executable tests on windows' }) if $^O eq 'MSWin32';
 	my $should_exec =  [ @{ $dzpcs->scripts } ];
 
 	foreach ( @{ $should_exec } ) {
-		ok	( -x $_ , "$_" . ' exists' );
+		ok	( -x $_ , "$_" . ' is executable' );
 	}
 };
 
-subtest 'catalyst files shoudln\'t be executable' => sub {
+subtest 'catalyst files that shoudln\'t be executable' => sub {
 	my $shouldnt_exec = [ @{$dzpcs->files} ];
 
 	foreach ( @{$shouldnt_exec} ) {
@@ -51,10 +58,4 @@ subtest 'catalyst files shoudln\'t be executable' => sub {
 	}
 };
 
-subtest 'catalyst files that dzil doesn\'nt need' => sub {
-	my $should_not_exist = [ @{ $dzpcs->files_not_created } ];
-	foreach ( @{ $should_not_exist } ) {
-		ok ( ! -e $_ , "$_" . ' not exists' );
-	}
-};
 done_testing;
