@@ -89,5 +89,25 @@ has 'scripts' => (
 	},
 );
 
+has 'files_not_created' => (
+	isa      => 'ArrayRef[Path::Class::File]',
+	traits   => ['Array'],
+	is       => 'ro',
+	required => 1,
+	lazy     => 1,
+	default  => sub {
+		my $self = shift;
+		my ( $mr, $mrl, $mrr, $mrs, $mrt, $mrri ) = @{ $self->directories };
+		my $lc_app = lc $self->appname;
+		return my $files_not_created = [
+			$mr->file  ( 'README'          ),
+			$mr->file  ( 'Changes'         ),
+			$mr->file  ( 'Makefile.PL'     ),
+			$mrt->file ( '02pod.t'         ),
+			$mrt->file ( '03podcoverage.t' ),
+		];
+	},
+);
+
 __PACKAGE__->meta->make_immutable;
 1;

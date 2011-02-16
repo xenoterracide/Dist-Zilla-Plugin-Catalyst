@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use 5.006;
 package Dist::Zilla::Plugin::Catalyst::New;
 BEGIN {
 	# VERSION
