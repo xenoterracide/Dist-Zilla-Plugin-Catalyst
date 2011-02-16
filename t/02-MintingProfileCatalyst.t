@@ -24,6 +24,7 @@ $tzil->mint_dist;
 my $dzpcs = DZPCshared->new({
 	appname => $tzil->name,
 	tempdir => $tzil->tempdir,
+	mntroot => 'minterprofile',
 });
 
 subtest 'catalyst files that should exist' => sub {

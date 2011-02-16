@@ -15,6 +15,12 @@ has 'tempdir' => (
 	required => 1,
 );
 
+has 'mntroot' => (
+	is       => 'ro',
+	isa      => 'Str',
+	required => 1,
+);
+
 has 'directories' => (
 	isa      => 'ArrayRef[Path::Class::Dir]',
 	traits   => ['Array'],
@@ -105,6 +111,26 @@ has 'files_not_created' => (
 			$mr->file  ( 'Makefile.PL'     ),
 			$mrt->file ( '02pod.t'         ),
 			$mrt->file ( '03podcoverage.t' ),
+		];
+	},
+);
+
+has 'directories_not_created' => (
+	isa      => 'ArrayRef[Path::Class::Dir]',
+	traits   => ['Array'],
+	is       => 'ro',
+	required => 1,
+	lazy     => 1,
+	default  => sub {
+		my $self = shift;
+		my $mr   = $self->mntroot;
+		my $cmpd = dir("corpus/$mr/profiles/default");
+		return my $directories_not_created = [
+			$cmpd->subdir( $self->appname ),
+			$cmpd->subdir( $self->appname )->subdir('t'     ),
+			$cmpd->subdir( $self->appname )->subdir('lib'   ),
+			$cmpd->subdir( $self->appname )->subdir('root'  ),
+			$cmpd->subdir( $self->appname )->subdir('script'),
 		];
 	},
 );

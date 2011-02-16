@@ -24,6 +24,7 @@ $tzil->mint_dist;
 my $dzpcs = DZPCshared->new({
 	appname => $tzil->name,
 	tempdir => $tzil->tempdir,
+	mntroot => 'mint',
 });
 
 subtest 'catalyst files that should exist' => sub {
@@ -58,4 +59,13 @@ subtest 'catalyst files that shoudln\'t be executable' => sub {
 	}
 };
 
+subtest 'catalyst directories that shouldn\'t exist' => sub {
+	# regression test, don't use CH->mk_dir() it creates directories near
+	# profile.ini
+	my $shouldnt_exist = [ @{$dzpcs->directories_not_created} ];
+
+	foreach ( @{$shouldnt_exist} ) {
+		ok	( ! -x $_ , "$_" . ' doesn\'t exist' );
+	}
+};
 done_testing;
