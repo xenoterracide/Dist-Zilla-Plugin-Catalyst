@@ -1,6 +1,7 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 
 0.15      2011-02-17
+	- plan does not accept a hash, fix syntax error
 
 0.14      2011-02-16
 	- Create 01app.t
