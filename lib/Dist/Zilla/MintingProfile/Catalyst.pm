@@ -3,7 +3,7 @@ use warnings;
 use 5.006;
 package Dist::Zilla::MintingProfile::Catalyst;
 BEGIN {
-	our $VERSION = 0.14;# VERSION
+	our $VERSION = 0.15;# VERSION
 }
 use Moose;
 use namespace::autoclean;
@@ -23,7 +23,7 @@ Dist::Zilla::MintingProfile::Catalyst - Default Minting Profile
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
