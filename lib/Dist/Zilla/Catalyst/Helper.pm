@@ -3,7 +3,7 @@ use warnings;
 use 5.006;
 package Dist::Zilla::Catalyst::Helper;
 BEGIN {
-	our $VERSION = 0.15;# VERSION
+	our $VERSION = 0.16;# VERSION
 }
 use Moose;
 use Dist::Zilla::File::InMemory;
@@ -67,7 +67,7 @@ Dist::Zilla::Catalyst::Helper - a subclass of Catalyst::Helper
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 DESCRIPTION
 

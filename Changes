@@ -1,5 +1,7 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 
+0.16      2011-02-17
+
 0.15      2011-02-17
 	- plan does not accept a hash, fix syntax error
 
