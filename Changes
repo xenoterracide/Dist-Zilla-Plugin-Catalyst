@@ -1,7 +1,7 @@
 Revision history for Dist::Zilla::Plugin::Catalyst
 {{$NEXT}}
 
-0.14      2011-23-16
+0.14      2011-02-16
 	- Create 01app.t
 	- rewrite changes to match CPAN::Changes::Spec
 	- rewrite tests to be more comprehensive, and more DRY
