@@ -1,7 +1,7 @@
+package Dist::Zilla::Plugin::Catalyst::New;
+use 5.008;
 use strict;
 use warnings;
-use 5.006;
-package Dist::Zilla::Plugin::Catalyst::New;
 BEGIN {
 	our $VERSION = '0.16'; # VERSION
 }
