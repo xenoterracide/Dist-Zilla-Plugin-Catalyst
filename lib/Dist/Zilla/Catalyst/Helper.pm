@@ -51,6 +51,7 @@ sub mk_file {
 	$file->mode( oct(755) ) if $file->name =~ /script/;
 
 	$self->_zilla_add_file($file);
+	return 1;
 }
 __PACKAGE__->meta->make_immutable;
 no Moose;
