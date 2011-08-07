@@ -5,7 +5,7 @@
       "Tomas Doran <bobtfish@bobtfish.net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.200013, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "artistic_2"
    ],
@@ -17,6 +17,9 @@
    "no_index" : {
       "directory" : [
          "corpus"
+      ],
+      "file" : [
+         "perlcritic.rc"
       ]
    },
    "prereqs" : {
@@ -41,26 +44,24 @@
       },
       "test" : {
          "requires" : {
-            "Carp" : 0,
             "Dist::Zilla::Tester" : 0,
             "English" : 0,
             "File::Find" : 0,
             "File::Temp" : 0,
             "FindBin" : 0,
-            "Scalar::Util" : 0,
-            "Test::More" : "0.94"
+            "Test::More" : 0
          }
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues"
+         "web" : "https://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues"
       },
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst.git",
-         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst"
+         "web" : "https://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst"
       }
    },
    "version" : "0.16"

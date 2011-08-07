@@ -44,6 +44,15 @@ Please read the SubmittingPatches file included with this Distribution. Patches
 that are of sufficient quality, within the goals of the project and pass the
 checklist will probably be accepted.
 
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+https://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
 =head1 AUTHORS
 
 =over 4
@@ -60,7 +69,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Caleb Cushing.
+This software is Copyright (c) 2011 by Caleb Cushing.
 
 This is free software, licensed under:
 

@@ -4,19 +4,17 @@ author:
   - 'Caleb Cushing <xenoterracide@gmail.com>'
   - 'Tomas Doran <bobtfish@bobtfish.net>'
 build_requires:
-  Carp: 0
   Dist::Zilla::Tester: 0
   English: 0
   File::Find: 0
   File::Temp: 0
   FindBin: 0
-  Scalar::Util: 0
-  Test::More: 0.94
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
   File::ShareDir::Install: 0.03
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.110930'
+generated_by: 'Dist::Zilla version 4.200013, CPAN::Meta::Converter version 2.112150'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,6 +23,8 @@ name: Dist-Zilla-Plugin-Catalyst
 no_index:
   directory:
     - corpus
+  file:
+    - perlcritic.rc
 requires:
   Catalyst::Helper: 1.30
   Dist::Zilla::File::FromCode: 0
@@ -36,6 +36,6 @@ requires:
   namespace::autoclean: 0
   perl: 5.006
 resources:
-  bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
+  bugtracker: https://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-Catalyst.git
 version: 0.16

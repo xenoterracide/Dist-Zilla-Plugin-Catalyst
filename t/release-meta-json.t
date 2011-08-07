@@ -9,8 +9,6 @@ BEGIN {
 
 
 use Test::More;
-
-eval "use Test::HasVersion";
-plan skip_all => "Test::HasVersion required for testing version numbers"
-  if $@;
-all_pm_version_ok();
+eval 'use Test::CPAN::Meta::JSON';
+plan skip_all => 'Test::CPAN::Meta::JSON required for testing META.json' if $@;
+meta_json_ok();

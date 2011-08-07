@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.006;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -14,14 +14,12 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'set of plugins for working with Catalyst',
   'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>, Tomas Doran <bobtfish@bobtfish.net>',
   'BUILD_REQUIRES' => {
-    'Carp' => '0',
     'Dist::Zilla::Tester' => '0',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'FindBin' => '0',
-    'Scalar::Util' => '0',
-    'Test::More' => '0.94'
+    'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.30',
