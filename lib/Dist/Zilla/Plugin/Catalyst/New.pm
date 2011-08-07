@@ -30,6 +30,7 @@ sub make_module {
 
 	# $name here is for backcompat in older versions of C::Devel
 	$helper->mk_app( $name );
+	return 1;
 }
 __PACKAGE__->meta->make_immutable;
 no Moose;
