@@ -16,7 +16,7 @@ sub make_module {
 
 	# format $name to what C::Helper wants
 	my $name = $self->zilla->name;
-	$name =~ s/-/::/g;
+	$name =~ s/-/::/gxms;
 
 	# turn authors into a scalar it's what C::Helper wants
 	my $authors = join( ',', @{$self->zilla->authors} );
